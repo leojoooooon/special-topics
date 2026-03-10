@@ -52,11 +52,16 @@ My initial concept was to utilize PredNet (https://github.com/coxlab/prednet) �
 However, during research and testing, I discovered that running complex neural networks locally in real-time suffers from severe frame rate instability and computational latency. Therefore, as a pragmatic prototype, I pivoted to using Optical Flow (a physics-based prediction model) for this iteration. Although the conceptual implications shift slightly—from a dataset-driven cognitive bias to a physics-driven inertial bias—the deployment architecture, the pipeline, and the resulting visual artifacts remain consistent to a large extent.
 
 This project utilizes Dense Optical Flow (specifically the Farneback algorithm via OpenCV) as its core prediction engine. By analyzing the brightness constancy between two consecutive frames, the algorithm calculates a dense 2D vector field that maps the instantaneous velocity and direction (u,v) of every single pixel.
+optical flow： https://en.wikipedia.org/wiki/Optical_flow
 
-currently using the default parameters, can be fine-tuned.
+currently using the default parameters, can be fine-tuned
 
-Python
+In Python
 ```
 flow = cv2.calcOpticalFlowFarneback( prev_gray, curr_gray, None, pyr_scale=0.5, levels=3, winsize=15, iterations=3, poly_n=5, poly_sigma=1.1, flags=0 )
 ```
-optical flow： https://en.wikipedia.org/wiki/Optical_flow
+## Further reflection
+
+Future iterations could focus on an in-depth study of the technical mechanics behind predictive models, seeking to push them into deeper technical implementations while justifying their applied rationale in Creative Expression.
+
+
