@@ -64,4 +64,6 @@ flow = cv2.calcOpticalFlowFarneback( prev_gray, curr_gray, None, pyr_scale=0.5, 
 
 Future iterations could focus on an in-depth study of the technical mechanics behind predictive models, seeking to push them into deeper technical implementations while justifying their applied rationale in Creative Expression.
 
+And nowadays prednet and opticals seems to be past tense，Future research could explore more transitioning. Such as pixel-level models (like PredNet) to latent-space predictive architectures such as V-JEPA with more possibilities.
+
 
